@@ -5,69 +5,93 @@
 }
 
 body {
-    width: 100%;
+     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(45deg, #0a0a0a, #3a4452); */
+    flex-direction: column;
+    background: linear-gradient(45deg, #d1d1f1, #d2eaea);
+    font-family: sans-serif;
 }
 
 
-/* .header {
+.header {
     font-size: 3rem;
     text-align: center;
     margin: 20px;
-} */
+}
 
 .container {
-    /* position: absolute; */
-    display: flex;
-    /* left: 30%; */
-    height: 90vmin;
-    width: 80vmin;
-    border: 2px solid black;
-    border-radius: 0.5rem;
-    flex-wrap: wrap;
+     width: 90vw;
+    max-width: 400px;
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    border: 2px solid black;
+    border-radius: 0.8rem;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
 }
 
 .enter {
-    width: 90%;
-    height: 15%;
-    padding: 30px;
-    margin: 30px 35px 2px 35px;
-    font-size: 2.5rem;
-    border: 2px solid black;
+   width: 100%;
+    height: 4rem;
+    font-size: 2rem;
     border-radius: 0.5rem;
+    border: 2px solid black;
+    padding: 0.8rem;
     background-color: rgb(222, 243, 243);
-    box-shadow: 5px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px rgba(255, 255, 255, 0.3);
     text-align: right;
+    margin-bottom: 1rem;
 }
 
 .keys {
-    display: flex;
-    flex-wrap: wrap;
-    height: 68%;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 30px;
-    /* border: 2px solid black; */
-    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
 }
 
 .func {
-    height: 15%;
-    width: 20%;
-    margin: 13px;
-    font-weight: 200;
-    font-size: 1.8rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     border-radius: 0.5rem;
-    box-shadow: 3px 3px rgba(255, 255, 255, 0.4);
-    cursor: pointer;
     background-color: rgb(234, 245, 245);
+    box-shadow: 2px 2px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.func:hover {
+    background-color: #d2eaea;
+}
+
+.op {
+    background-color: #d1d1f1;
 }
 
 .equalTo {
-    background-color: rgba(235, 60, 7, 0.7);
+    background-color: rgba(235, 60, 7, 0.8);
+    color: white;
+    grid-column: span 1;
+}
+
+/*  Extra small screens */
+@media (max-width: 480px) {
+    .container {
+        width: 95vw;
+        padding: 1rem;
+    }
+
+    .enter {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .func {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
 }

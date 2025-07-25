@@ -1,95 +1,161 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    background-color: darkseagreen;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: darkseagreen;
 }
 
-.navbar,
-.msg {
-    background-color: rgb(2, 2, 36);
-    color: white;
-    font-size: 45px;
-    width: 100%;
-    height: 60px;
+
+.navbar {
+  background-color: rgb(2, 2, 36);
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 0;
+  width: 100%;
 }
 
 p {
-    font-size: 40px;
-    font-weight: 500;
-    margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
 }
 
-.icon,
-.scorebar {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 250px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    /* border: 2px solid black; */
+.icon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem auto;
+  max-width: 90vw;
 }
 
 .img {
-    height: 180px;
-    width: 180px;
-    /* border: 3px solid black; */
-    border-radius: 50%;
-    margin: 50px;
-    /* color: #fff; */
-    font-size: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
 }
 
-
-/* .img:hover {
-    cursor: pointer;
-    background-color: darksalmon;
-    border: 5px solid black;
-} */
+.img:hover {
+  cursor: pointer;
+  background-color: darksalmon;
+  border: 3px solid black;
+  transform: scale(1.05);
+}
 
 #rock {
-    background-color: rgb(237, 133, 150);
+  background-color: rgb(237, 133, 150);
 }
-
 #paper {
-    background-color: plum;
+  background-color: plum;
 }
-
 #scissors {
-    background-color: cornflowerblue;
-}
-
-#rock:hover,
-#paper:hover,
-#scissors:hover {
-    cursor: pointer;
-    background-color: darksalmon;
-    border: 3px solid black;
-}
-
-.scorebar {
-    height: 100px;
+  background-color: cornflowerblue;
 }
 
 .you,
 .comp {
-    height: 100px;
-    width: 100px;
-    margin: 10px 50px;
-    font-size: 30px;
+  font-size: 1.5rem;
 }
 
+.you p,
+.comp p {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.choice-display{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.choice {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.score-display{
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+}
+.scorebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  flex-direction: row;
+  height: auto;
+  gap: 10rem;
+}
 .msg {
-    width: 600px;
-    margin-top: 80px;
-    margin-left: 550px;
-    border-radius: 0.8rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: rgb(2, 2, 36);
+  color: white;
+  border-radius: 0.8rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+/* 🔻 Responsive tweaks */
+@media (max-width: 768px) {
+  .img {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+    margin: 10px;
+  }
+
+  .navbar {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .msg {
+    font-size: 1.2rem;
+  }
+
+  .you,
+  .comp {
+    font-size: 1.2rem;
+  }
+
+  .you p,
+  .comp p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  .msg {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .navbar {
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
 }

@@ -1,6 +1,6 @@
 function AppName(){
     return (
-        <center><h1>ToDo List</h1></center>
+        <div className="header">Your To-Do List</div>
     );
 }
 

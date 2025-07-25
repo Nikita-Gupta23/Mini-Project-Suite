@@ -17,12 +17,13 @@ const ref = [
     ['I', 1]
 ];
 
-input.addEventListener("keydown", e => {
+input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         convert.click();
     }
 });
-convert.addEventListener("click", () => {
+convert.addEventListener("click", (e) => {
+    e.preventDefault()
     let value = input.value;
     if (!value) {
         output.innerText = "Please enter a valid number"
@@ -39,5 +40,6 @@ convert.addEventListener("click", () => {
             }
         }
         output.innerText = res;
+        output.classList.remove("hidden");
     }
 });

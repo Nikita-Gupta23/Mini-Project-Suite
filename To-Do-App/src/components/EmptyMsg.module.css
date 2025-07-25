@@ -1,4 +1,9 @@
 .msg {
-    text-align: center;
-    font-size: larger;
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 10px;
 }

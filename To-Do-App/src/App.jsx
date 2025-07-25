@@ -21,10 +21,12 @@ function App() {
 
   return (
     <>
+    <div className="app-container">
       <AppName />
       <AddTodo onAddToDo={onAddToDo} />
       {todoItems.length ===0 && <EmptyMsg></EmptyMsg>}
       <TodoItems todoItems={todoItems} handleDel={onDelete} />
+      </div>
     </>
   );
 }

@@ -15,4 +15,5 @@ chkBtn.addEventListener("click", () => {
 });
 clrBtn.addEventListener("click", () => {
     output.innerText = "";
+    input.value="";
 });
